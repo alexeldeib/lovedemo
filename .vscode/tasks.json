@@ -8,16 +8,19 @@
 {
     "version": "2.0.0",
     "tasks": [
-        {
+            {
             "label": "LOVE",
             // The command is the path to your love install exe.
-            "command": "C:\\Program Files\\LOVE\\love.exe",
+            "command": "love",
+            "windows": {
+                "command": "C:\\Program Files\\LOVE\\love.exe",
+                "type": "process",
+            },
             // args are appended onto the command run, just like a batch file
             "args": [
                 "${workspaceRoot}"
             ],
             // The command is a shell script, and not just a normal command
-            "type": "process",
             "presentation": {
                 "echo": true,
                 "reveal": "always",
